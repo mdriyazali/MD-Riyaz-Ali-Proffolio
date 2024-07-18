@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MD Riyaz Ali - DevOps Engineer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
     <header>
@@ -23,9 +24,11 @@
     </header>
 
     <section id="home">
-        <h1>MD Riyaz Ali</h1>
-        <p>DevOps Engineer</p>
-        <button onclick="window.location.href='#contact'">Contact Me</button>
+        <div class="intro">
+            <h1>MD Riyaz Ali</h1>
+            <p>DevOps Engineer</p>
+            <button onclick="scrollToSection('contact')">Contact Me</button>
+        </div>
     </section>
 
     <section id="about">
@@ -35,18 +38,18 @@
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul>
-            <li>Operating Systems: Windows, Linux (Ubuntu, CentOS)</li>
-            <li>Cloud Platform: AWS</li>
-            <li>Configuration Management: Ansible, Terraform</li>
-            <li>Hypervisor: HyperV, Esxi</li>
-            <li>Containerization: Docker, Kubernetes</li>
-            <li>Version Control: Git</li>
-            <li>CI/CD: Jenkins, BitBucket, GitLab</li>
-            <li>Monitoring: Checkmk, Zabbix</li>
-            <li>Networking: TCP/IP, DNS, DHCP, VLAN</li>
-            <li>Programming Languages: Python, HTML, CSS</li>
-        </ul>
+        <div class="skills-list">
+            <div class="skill">Operating Systems: Windows, Linux (Ubuntu, CentOS)</div>
+            <div class="skill">Cloud Platform: AWS</div>
+            <div class="skill">Configuration Management: Ansible, Terraform</div>
+            <div class="skill">Hypervisor: HyperV, Esxi</div>
+            <div class="skill">Containerization: Docker, Kubernetes</div>
+            <div class="skill">Version Control: Git</div>
+            <div class="skill">CI/CD: Jenkins, BitBucket, GitLab</div>
+            <div class="skill">Monitoring: Checkmk, Zabbix</div>
+            <div class="skill">Networking: TCP/IP, DNS, DHCP, VLAN</div>
+            <div class="skill">Programming Languages: Python, HTML, CSS</div>
+        </div>
     </section>
 
     <section id="experience">
@@ -115,5 +118,7 @@
     <footer>
         <p>&copy; 2024 MD Riyaz Ali. All Rights Reserved.</p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

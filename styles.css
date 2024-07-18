@@ -9,50 +9,121 @@ header {
     background: #333;
     color: #fff;
     padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
 }
 
 section {
-    padding: 2rem;
-    margin: 1rem auto;
+    padding: 4rem 2rem;
+    margin: 5rem auto;
     background: #fff;
     max-width: 800px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
 h1, h2 {
     text-align: center;
 }
 
-button {
-    display: block;
-    width: 100%;
-    padding: 1rem;
+.intro {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.intro p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.intro button {
+    padding: 0.8rem 2rem;
     background: #007BFF;
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
-    margin-top: 1rem;
     cursor: pointer;
+    transition: background 0.3s;
+    animation: fadeIn 1s ease-in-out;
 }
 
-button:hover {
+.intro button:hover {
+    background: #0056b3;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill {
+    background: #007BFF;
+    color: #fff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    flex: 1 1 calc(50% - 1rem);
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+.job, .project {
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.project button {
+    padding: 0.5rem 1rem;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.project button:hover {
     background: #0056b3;
 }
 
@@ -64,4 +135,36 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
